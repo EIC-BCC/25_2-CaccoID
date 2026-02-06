@@ -1,0 +1,67 @@
+spring:
+  application:
+    name: caccoId
+  datasource:
+    url: jdbc:mysql://${DB_HOST}/${DB_DATABASE}?serverTimezone=America/Sao_Paulo
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 30MB
+
+  
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USER}
+    password: ${MAIL_PASS}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+logging:
+  level:
+    root: INFO
+    br.com.cefet.caccoId: INFO
+
+server:
+  address: 0.0.0.0
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /api-docs
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET}
+
+minio:
+  url: {MINIO_URL}
+  access-key: ${MINIO_ROOT_USER}
+  secret-key: ${MINIO_ROOT_PASSWORD}
+  bucket: ${BUCKET_NAME}

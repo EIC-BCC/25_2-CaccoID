@@ -187,8 +187,9 @@ flowchart LR
 * Docker Compose instalado
 
 ## Executando o projeto
+Basta configurar os arquivos .env.example na pasta caccoid-front, e caccoId e renomear para .env .
 
-No diretório raiz do projeto, execute:
+E no diretório raiz do projeto, execute:
 
 ```bash
 docker compose up --build
