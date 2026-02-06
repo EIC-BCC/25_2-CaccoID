@@ -12,7 +12,7 @@
 **Semestre de Defesa:**
 2025-2
 
-[PDF do TCC](Colocar link do pdf)
+[PDF do TCC]()
 
 ---
 
@@ -21,6 +21,10 @@
 Sistema web para **solicitação, gestão e emissão de carteirinhas estudantis digitais e físicas**, desenvolvido para o curso de Bacharelado em Ciência da Computação do CEFET/RJ.
 
 Para rodar a aplicação localmente:
+
+Basta configurar os arquivos .env.example na pasta caccoid-front, e caccoId e renomear para .env .
+
+E rodar o seguinte comando no terminal:
 
 ```bash
 docker compose up --build
@@ -202,3 +206,4 @@ Esse comando irá:
 * Subir todos os serviços de forma integrada
 
 Após a inicialização, a aplicação estará disponível conforme as portas configuradas no `docker-compose.yml`.
+
