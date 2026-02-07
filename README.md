@@ -12,7 +12,7 @@
 **Semestre de Defesa:**
 2025-2
 
-[PDF do TCC]()
+[PDF do TCC](https://github.com/EIC-BCC/25_2-CaccoID/blob/main/TCC_2_CACCO_ID.pdf)
 
 ---
 
@@ -206,4 +206,5 @@ Esse comando irá:
 * Subir todos os serviços de forma integrada
 
 Após a inicialização, a aplicação estará disponível conforme as portas configuradas no `docker-compose.yml`.
+
 
